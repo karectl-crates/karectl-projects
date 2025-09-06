@@ -3,12 +3,12 @@ kind: System
 metadata:
   name: asthma
   title: "asthma"
-  description: "test3"
+  description: "test4"
   annotations:
     karectl.io/project-id: asthma
-    karectl.io/principal-investigator: "user:default/vvcb"
-    karectl.io/data-classification: "public"
-    karectl.io/research-domain: "biomedical"
+    karectl.io/principal-investigator: "user:default/guest"
+    karectl.io/data-classification: "internal"
+    
     karectl.io/resource-tier: "medium"
     karectl.io/network-isolation: "standard"
     argocd/app-name: asthma
@@ -26,5 +26,5 @@ metadata:
 spec:
   type: research-project
   lifecycle: experimental
-  owner: "user:default/vvcb"
+  owner: "user:default/guest"
   domain: research-computing

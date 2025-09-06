@@ -10,13 +10,13 @@ metadata:
 spec:
   project:
     name: "asthma"
-    description: "test3"
-    principalInvestigator: "user:default/vvcb"
-    researchDomain: "biomedical"
+    description: "test4"
+    principalInvestigator: "user:default/guest"
+    
     
     
   compliance:
-    dataClassification: "public"
+    dataClassification: "internal"
     
     dataRetentionPeriod: 7
     
