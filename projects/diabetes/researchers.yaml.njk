@@ -1,0 +1,13 @@
+apiVersion: karectl.io/v1alpha1
+kind: ResearchTeam
+metadata:
+  name: diabetes-team
+  namespace: karectl-system
+  labels:
+    karectl.io/project: diabetes
+spec:
+  project: diabetes
+  
+  keycloak:
+    groupName: diabetes
+    scimEndpoint: "https://keycloak.karectl.local/scim"
