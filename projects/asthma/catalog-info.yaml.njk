@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: asthma
+  title: "asthma"
+  description: "adadada"
+  annotations:
+    karectl.io/project-id: asthma
+    karectl.io/principal-investigator: "user:default/vvcb"
+    karectl.io/data-classification: "public"
+    karectl.io/research-domain: "biomedical"
+    karectl.io/resource-tier: "medium"
+    karectl.io/network-isolation: "standard"
+    argocd/app-name: asthma
+    grafana/dashboard-selector: karectl-project-asthma
+  links:
+    - url: https://jupyter.asthma.karectl.local
+      title: JupyterHub
+      icon: web
+    - url: https://gitea.asthma.karectl.local
+      title: Gitea Repository
+      icon: web  
+    - url: https://argocd.karectl.local/applications/asthma
+      title: ArgoCD Application
+      icon: web
+spec:
+  type: research-project
+  lifecycle: experimental
+  owner: "user:default/vvcb"
+  domain: research-computing
