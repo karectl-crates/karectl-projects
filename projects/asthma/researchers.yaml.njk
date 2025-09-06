@@ -1,0 +1,13 @@
+apiVersion: karectl.io/v1alpha1
+kind: ResearchTeam
+metadata:
+  name: asthma-team
+  namespace: karectl-system
+  labels:
+    karectl.io/project: asthma
+spec:
+  project: asthma
+  
+  keycloak:
+    groupName: asthma
+    scimEndpoint: "https://keycloak.karectl.local/scim"

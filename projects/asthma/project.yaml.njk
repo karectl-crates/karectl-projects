@@ -1,0 +1,44 @@
+apiVersion: karectl.io/v1alpha1
+kind: ResearchProject
+metadata:
+  name: asthma
+  namespace: karectl-system
+  annotations:
+    karectl.io/created-by: "vvcb"
+    karectl.io/created-at: "${{ '' | now }}"
+    karectl.io/backstage-entity: "vvcb"
+spec:
+  project:
+    name: "asthma"
+    description: "adadada"
+    principalInvestigator: "user:default/vvcb"
+    researchDomain: "biomedical"
+    
+    
+  compliance:
+    dataClassification: "public"
+    
+    dataRetentionPeriod: 7
+    
+  duration:
+    months: 12
+    autoRenewal: false
+    
+  resources:
+    tier: "medium"
+    storage:
+      home: "100Gi"
+      data: "500Gi"
+      scratch: "200Gi"
+      
+  network:
+    isolation: "standard"
+    
+      
+  services:
+    compute:
+      - jupyterhub
+
+    
+    
+    
