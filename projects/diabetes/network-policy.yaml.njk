@@ -1,0 +1,33 @@
+apiVersion: karectl.io/v1alpha1
+kind: ResearchNetworkPolicy
+metadata:
+  name: diabetes-network
+  namespace: karectl-system
+  labels:
+    karectl.io/project: diabetes
+spec:
+  project: diabetes
+  dataClassification: "public"
+  isolation: "standard"
+  
+  ciliumPolicies:
+    - name: diabetes-egress
+      spec:
+        endpointSelector:
+          matchLabels:
+            karectl.io/project: diabetes
+        egress:
+          # Allow internal cluster communication
+          - toEntities:
+            - cluster
+          # Allow DNS
+          - toEndpoints:
+            - matchLabels:
+                k8s:io.kubernetes.pod.namespace: kube-system
+                k8s:app: kube-dns
+            toPorts:
+            - ports:
+              - port: "53"
+                protocol: UDP
+          # Project-specific external sites
+          

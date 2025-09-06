@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: diabetes
+  title: "diabetes"
+  description: "scfsar23"
+  annotations:
+    karectl.io/project-id: diabetes
+    karectl.io/principal-investigator: "user:default/vvcb"
+    karectl.io/data-classification: "public"
+    
+    karectl.io/resource-tier: "medium"
+    karectl.io/network-isolation: "standard"
+    argocd/app-name: diabetes
+    grafana/dashboard-selector: karectl-project-diabetes
+  links:
+    - url: https://jupyter.diabetes.karectl.local
+      title: JupyterHub
+      icon: web
+    - url: https://gitea.diabetes.karectl.local
+      title: Gitea Repository
+      icon: web  
+    - url: https://argocd.karectl.local/applications/diabetes
+      title: ArgoCD Application
+      icon: web
+spec:
+  type: research-project
+  lifecycle: experimental
+  owner: "user:default/vvcb"
+  domain: research-computing
