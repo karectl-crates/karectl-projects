@@ -26,5 +26,5 @@ metadata:
 spec:
   type: research-project
   lifecycle: experimental
-  owner: "user:default/vvcb"
+  owner: "group:asthma/asthma-team"
   domain: research-computing
